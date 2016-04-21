@@ -262,6 +262,7 @@ controller.on("mention", function(bot, message) {
   }
 })
 
+/*
 controller.on("user_channel_join", function(bot, message) {
   var intro = "Welcome <@"+message.user+">! Major :key: for success in this channel";
   bot.reply(message, intro);
@@ -272,9 +273,9 @@ controller.on("user_group_join", function(bot, message) {
   var intro = "Welcome <@"+message.user+">! Major :key: for success in this group";
   bot.reply(message, intro);
   replyRandomKey(bot, message);
-})
+})*/
 
-
+/*
 controller.hears(["major key", "major keys", ":key:", " key", " keys"], ["ambient"], function(bot, message) {
   var intro = "Yo <@"+message.user+">! You think you can give out the :key: to success but only I have the :key:.";
   bot.reply(message, intro);
@@ -297,10 +298,10 @@ controller.hears(["lol", "lmao", "haha"], ["ambient"], function(bot, message) {
     var index = Math.floor(Math.random() * laughing.length);
     bot.reply(message, laughing[index]);
   }
-  
-}) 
 
+})
+*/
 
-controller.hears(["send key to"], ["direct_message", "direct_metion"], function(bot, message) {
+controller.hears(["send key to"], ["direct_message", "direct_mention"], function(bot, message) {
   sendKeyToHandler(bot, message);
 })
